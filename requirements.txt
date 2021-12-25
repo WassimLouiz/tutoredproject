@@ -1,0 +1,7 @@
+easyocr==1.4.1
+opencv-python
+Pillow==8.2.0
+tensorflow-cpu==2.5.0
+regex==2021.7.6
+fastapi
+uvicorn
