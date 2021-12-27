@@ -4,5 +4,4 @@ services:
           build:  .
           container_name: "changeltest"
           ports:
-          - "8000:15400"
-         
+          - "8000:8000"
