@@ -1,6 +1,7 @@
 from fastapi import FastAPI 
 import uvicorn
 import pickle
+from tensorflow import keras
 from pycode.models import Image
 import easyocr
 from PIL import Image as im
@@ -12,7 +13,8 @@ import cv2
 
 app = FastAPI()
 
-loaded_model = pickle.load( open( "model_test.h5", "rb" ) )
+loaded_model = keras.models.load_model("pycode/model_test")
+#loaded_model = pickle.load(open('pycode/model_test','rb'))
 
 @app.get("/Mr.Mrs{name}")
 def yolo(name):
