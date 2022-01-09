@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import uvicorn
 import pickle
 from tensorflow import keras
-from pycode.models import Image
+from models import Image
 import easyocr
 from PIL import Image as im
 import matplotlib.pyplot  as plt
@@ -13,7 +13,7 @@ import cv2
 
 app = FastAPI()
 
-loaded_model = keras.models.load_model("pycode/model_test")
+loaded_model = keras.models.load_model("pycode/model_test.h5")
 #loaded_model = pickle.load(open('pycode/model_test','rb'))
 
 @app.get("/Mr.Mrs{name}")
